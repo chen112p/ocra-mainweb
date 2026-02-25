@@ -1,0 +1,139 @@
+<!-- index.html (simple) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Data Cleanup & Automation | Kitchener–Waterloo</title>
+    <meta
+      name="description"
+      content="Data cleaning and simple automation for small fabrication and machining shops in Kitchener–Waterloo."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-row">
+        <div class="brand">Your Business Name</div>
+        <nav class="nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Data cleanup and automation for small shops</h1>
+          <p class="sub">
+            I help small fabrication and machining shops in Kitchener–Waterloo clean data and automate Excel-based reporting.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#contact">Contact</a>
+            <a class="btn btn-outline" href="#services">Services</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Data cleaning</h3>
+              <ul>
+                <li>Fix missing/invalid values</li>
+                <li>Remove duplicates</li>
+                <li>Standardize names and IDs</li>
+                <li>Deliver clean XLSX/CSV</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Excel/report automation</h3>
+              <ul>
+                <li>Weekly/monthly reports</li>
+                <li>One-click scripts</li>
+                <li>Repeatable templates</li>
+                <li>Basic QA checks</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Workflow setup</h3>
+              <ul>
+                <li>Folder + file naming standards</li>
+                <li>Simple data entry rules</li>
+                <li>Documentation and handoff</li>
+                <li>Optional monthly support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            I’m an engineer focused on practical improvements. I build small tools and scripts that reduce manual work and improve data quality.
+          </p>
+          <p class="muted">
+            Typical files: Excel (XLSX), CSV, ERP exports.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-alt">
+        <div class="container">
+          <h2>Contact</h2>
+          <p class="muted">Email is easiest:</p>
+          <p class="contact-line">
+            <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+          </p>
+
+          <div class="divider"></div>
+
+          <p class="muted">Or send a message:</p>
+
+          <!-- Replace action with Formspree/Getform endpoint when ready -->
+          <form class="form" action="#" method="post">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              What do you need help with?
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send</button>
+
+            <p class="muted small">
+              (If hosted on GitHub Pages, connect this form to Formspree/Getform/Netlify Forms.)
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="muted">© <span id="year"></span> Your Business Name</span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
