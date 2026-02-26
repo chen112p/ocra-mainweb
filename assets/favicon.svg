@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="30" fill="#084523"/>
+  
+  <!-- Inner ring -->
+  <circle cx="32" cy="32" r="22" fill="#52933A"/>
+  
+  <!-- Center -->
+  <circle cx="32" cy="32" r="6" fill="#F4F1E8"/>
+
+  <!-- 6 radial holes (industrial wheel feel) -->
+  <circle cx="32" cy="14" r="4" fill="#F4F1E8"/>
+  <circle cx="48" cy="23" r="4" fill="#F4F1E8"/>
+  <circle cx="48" cy="41" r="4" fill="#F4F1E8"/>
+  <circle cx="32" cy="50" r="4" fill="#F4F1E8"/>
+  <circle cx="16" cy="41" r="4" fill="#F4F1E8"/>
+  <circle cx="16" cy="23" r="4" fill="#F4F1E8"/>
+</svg>

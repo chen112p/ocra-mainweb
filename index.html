@@ -1,134 +1,329 @@
-<!-- index.html (simple) -->
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#07130B",
+              forest: "#084523",
+              machine: "#52933A",
+              lime: "#78B239",
+              paper: "#F4F1E8",
+              steel: "#223024",
+              line: "rgba(8,69,35,.18)"
+            },
+            boxShadow: {
+              hard: "0 10px 0 rgba(1,24,5,.35)",
+              plate: "0 12px 30px rgba(1,24,5,.18)"
+            }
+          }
+        }
+      }
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Data Cleanup & Automation | Kitchener–Waterloo</title>
+    <title>Ocra Technology Solutions | KW</title>
     <meta
       name="description"
-      content="Data cleaning and simple automation for small fabrication and machining shops in Kitchener–Waterloo."
+      content="Data cleaning and practical automation for fabrication and machining shops in Kitchener–Waterloo."
     />
-    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
-    <header class="header">
-      <div class="container header-row">
-        <div class="brand">Your Business Name</div>
-        <nav class="nav">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+  <body class="bg-paper text-ink">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-line">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#" class="flex items-center gap-3">
+            <img src="assets/business-logo.png" alt="Ocra Technology Solutions" class="h-10 w-auto" />
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-forest">
+            <a class="hover:text-ink" href="#services">Services</a>
+            <a class="hover:text-ink" href="#process">Process</a>
+            <a class="hover:text-ink" href="#about">About</a>
+            <a class="hover:text-ink" href="#contact">Contact</a>
+          </nav>
+
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-md bg-forest px-4 py-2 text-sm font-semibold text-paper hover:bg-ink"
+          >
+            Book a meeting
+          </a>
+        </div>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Data cleanup and automation for small shops</h1>
-          <p class="sub">
-            I help small fabrication and machining shops in Kitchener–Waterloo clean data and automate Excel-based reporting.
-          </p>
-          <div class="cta">
-            <a class="btn" href="#contact">Contact</a>
-            <a class="btn btn-outline" href="#services">Services</a>
-          </div>
-        </div>
-      </section>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <!-- Technical grid + subtle “paper plate” -->
+      <div class="pointer-events-none absolute inset-0">
+        <div
+          class="absolute inset-0 opacity-60"
+          style="background-image:
+            linear-gradient(to right, rgba(8,69,35,.12) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(8,69,35,.12) 1px, transparent 1px);
+            background-size: 56px 56px;"
+        ></div>
+        <div class="absolute -top-40 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-lime/15 blur-3xl"></div>
+        <div class="absolute -bottom-44 right-10 h-96 w-96 rounded-full bg-machine/15 blur-3xl"></div>
+      </div>
 
-      <section id="services" class="section">
-        <div class="container">
-          <h2>Services</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>Data cleaning</h3>
-              <ul>
-                <li>Fix missing/invalid values</li>
-                <li>Remove duplicates</li>
-                <li>Standardize names and IDs</li>
-                <li>Deliver clean XLSX/CSV</li>
-              </ul>
+      <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 relative">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <!-- Left -->
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1 text-xs font-semibold text-forest">
+              <span class="h-2 w-2 rounded-full bg-lime"></span>
+              Local to Kitchener–Waterloo • On-site available
             </div>
 
-            <div class="card">
-              <h3>Excel/report automation</h3>
-              <ul>
-                <li>Weekly/monthly reports</li>
-                <li>One-click scripts</li>
-                <li>Repeatable templates</li>
-                <li>Basic QA checks</li>
-              </ul>
-            </div>
+            <h1 class="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight text-ink">
+              Data cleanup & automation for fabrication and machining shops
+            </h1>
 
-            <div class="card">
-              <h3>Workflow setup</h3>
-              <ul>
-                <li>Folder + file naming standards</li>
-                <li>Simple data entry rules</li>
-                <li>Documentation and handoff</li>
-                <li>Optional monthly support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <h2>About</h2>
-          <p>
-            I’m an engineer focused on practical improvements. I build small tools and scripts that reduce manual work and improve data quality.
-          </p>
-          <p class="muted">
-            Typical files: Excel (XLSX), CSV, ERP exports.
-          </p>
-        </div>
-      </section>
-
-      <section id="contact" class="section section-alt">
-        <div class="container">
-          <h2>Contact</h2>
-          <p class="muted">Email is easiest:</p>
-          <p class="contact-line">
-            <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
-          </p>
-
-          <div class="divider"></div>
-
-          <p class="muted">Or send a message:</p>
-
-          <!-- Replace action with Formspree/Getform endpoint when ready -->
-          <form class="form" action="#" method="post">
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-
-            <label>
-              What do you need help with?
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-
-            <button class="btn" type="submit">Send</button>
-
-            <p class="muted small">
-              (If hosted on GitHub Pages, connect this form to Formspree/Getform/Netlify Forms.)
+            <p class="mt-5 text-lg leading-relaxed text-steel">
+              Reduce manual Excel work. Improve data accuracy. Get reliable weekly reports.
+              I integrate into your current workflow and provide documentation + handoff.
             </p>
-          </form>
-        </div>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <div class="container">
-        <span class="muted">© <span id="year"></span> Your Business Name</span>
+            <div class="mt-7 flex flex-col sm:flex-row gap-3">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-md bg-forest px-6 py-3 font-semibold text-paper shadow-hard hover:bg-ink"
+              >
+                Request a quote
+              </a>
+              <a
+                href="#services"
+                class="inline-flex items-center justify-center rounded-md border border-forest/40 bg-paper px-6 py-3 font-semibold text-forest hover:bg-forest hover:text-paper"
+              >
+                View services
+              </a>
+            </div>
+
+            <!-- Spec strip -->
+            <div class="mt-10 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-lg border border-line bg-paper p-4 shadow-plate">
+                <div class="text-xs font-bold tracking-widest text-forest">DELIVERABLE</div>
+                <div class="mt-1 font-semibold">Clean XLSX/CSV + rules</div>
+                <div class="mt-1 text-steel">Duplicates, IDs, naming, missing fields</div>
+              </div>
+              <div class="rounded-lg border border-line bg-paper p-4 shadow-plate">
+                <div class="text-xs font-bold tracking-widest text-forest">DELIVERABLE</div>
+                <div class="mt-1 font-semibold">One-click reporting</div>
+                <div class="mt-1 text-steel">Templates + QA checks + exports</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right “technical card” -->
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="flex items-center justify-between">
+              <div class="text-xs font-bold tracking-widest text-forest">TYPICAL INPUTS</div>
+              <div class="text-xs font-semibold text-steel">v1.0</div>
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-md border border-line bg-paper px-2 py-1 text-sm font-semibold text-forest">XLSX</span>
+              <span class="rounded-md border border-line bg-paper px-2 py-1 text-sm font-semibold text-forest">CSV</span>
+              <span class="rounded-md border border-line bg-paper px-2 py-1 text-sm font-semibold text-forest">ERP exports</span>
+              <span class="rounded-md border border-line bg-paper px-2 py-1 text-sm font-semibold text-forest">Shared drive</span>
+              <span class="rounded-md border border-line bg-paper px-2 py-1 text-sm font-semibold text-forest">Email attachments</span>
+            </div>
+
+            <div class="mt-6 border-t border-line pt-5">
+              <div class="text-xs font-bold tracking-widest text-forest">WHAT YOU GET</div>
+              <ul class="mt-3 space-y-2 text-steel">
+                <li>• Production integration (your folders + exports)</li>
+                <li>• Documentation / SOP + handoff</li>
+                <li>• Optional on-site walkthrough with staff</li>
+              </ul>
+            </div>
+
+            <div class="mt-6 rounded-xl border border-line bg-forest/5 p-4">
+              <div class="text-sm font-semibold text-forest">Fastest start</div>
+              <p class="mt-1 text-sm text-steel">
+                Send a redacted sample file + the report you want. I’ll propose a simple, maintainable solution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-6 py-16">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Services</h2>
+        <p class="mt-3 text-steel max-w-2xl">
+          Practical improvements that fit real shop workflows. Start small, prove value, expand.
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-ink">Data cleaning</h3>
+              <span class="text-xs font-bold tracking-widest text-forest">SPRINT</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-steel">
+              <li>• Fix missing/invalid values</li>
+              <li>• Remove duplicates</li>
+              <li>• Standardize names and IDs</li>
+              <li>• Deliver clean XLSX/CSV</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-ink">Report automation</h3>
+              <span class="text-xs font-bold tracking-widest text-forest">REPEATABLE</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-steel">
+              <li>• Weekly/monthly reports</li>
+              <li>• One-click scripts</li>
+              <li>• Repeatable templates</li>
+              <li>• Basic QA checks</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-ink">Workflow setup</h3>
+              <span class="text-xs font-bold tracking-widest text-forest">HANDOFF</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-steel">
+              <li>• Folder + file naming standards</li>
+              <li>• Simple data entry rules</li>
+              <li>• Documentation and handoff</li>
+              <li>• Optional monthly support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-6 py-16">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Process</h2>
+        <p class="mt-3 text-steel max-w-2xl">
+          Clear steps. Minimal disruption. Production integration + documentation included.
+        </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-4">
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="text-xs font-bold tracking-widest text-forest">STEP 1</div>
+            <div class="mt-2 font-bold">Discovery</div>
+            <p class="mt-2 text-steel">Review files, define outputs, align on scope. On-site in KW if useful.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="text-xs font-bold tracking-widest text-forest">STEP 2</div>
+            <div class="mt-2 font-bold">Prototype</div>
+            <p class="mt-2 text-steel">Quick version to validate logic and report format before building deeper.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="text-xs font-bold tracking-widest text-forest">STEP 3</div>
+            <div class="mt-2 font-bold">Integrate</div>
+            <p class="mt-2 text-steel">Connect to your folders/exports. Add QA checks to catch bad inputs.</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="text-xs font-bold tracking-widest text-forest">STEP 4</div>
+            <div class="mt-2 font-bold">Handoff</div>
+            <p class="mt-2 text-steel">SOP + training so your staff can run it. Optional support plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-6 py-16">
+        <h2 class="text-2xl md:text-3xl font-extrabold">About</h2>
+        <div class="mt-4 grid gap-8 md:grid-cols-2">
+          <p class="text-steel leading-relaxed">
+            I’m an engineer focused on practical improvements: fewer manual steps, fewer errors,
+            and reporting you can trust. The goal is straightforward—save time and reduce rework.
+          </p>
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="text-xs font-bold tracking-widest text-forest">NOTE</div>
+            <p class="mt-2 text-steel">
+              Typical files: Excel (XLSX), CSV, ERP exports. I keep solutions maintainable and well-documented.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-6 py-16">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Contact</h2>
+        <p class="mt-3 text-steel max-w-2xl">
+          Email is easiest. You can also request an on-site visit in Kitchener–Waterloo.
+        </p>
+
+        <div class="mt-10 grid gap-8 md:grid-cols-2">
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="text-xs font-bold tracking-widest text-forest">EMAIL</div>
+            <p class="mt-2 text-lg font-bold">
+              <a class="text-forest hover:text-ink" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+            </p>
+            <div class="mt-6 text-xs font-bold tracking-widest text-forest">MEETING OPTIONS</div>
+            <ul class="mt-3 space-y-2 text-steel">
+              <li>• On-site (KW)</li>
+              <li>• Video call</li>
+              <li>• Phone</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-line bg-paper p-6 shadow-plate">
+            <div class="text-xs font-bold tracking-widest text-forest">MESSAGE</div>
+
+            <!-- Replace action with Formspree/Getform endpoint later -->
+            <form class="mt-5 space-y-4" action="https://formspree.io/f/xlgwzbaq" method="post">
+              <label class="block">
+                <span class="text-sm font-semibold text-forest">Name</span>
+                <input class="mt-2 w-full rounded-md border border-line bg-paper px-3 py-2 focus:outline-none focus:ring-2 focus:ring-lime"
+                       type="text" name="name" required />
+              </label>
+
+              <label class="block">
+                <span class="text-sm font-semibold text-forest">Email</span>
+                <input class="mt-2 w-full rounded-md border border-line bg-paper px-3 py-2 focus:outline-none focus:ring-2 focus:ring-lime"
+                       type="email" name="email" required />
+              </label>
+
+              <label class="block">
+                <span class="text-sm font-semibold text-forest">What do you need help with?</span>
+                <textarea class="mt-2 w-full rounded-md border border-line bg-paper px-3 py-2 focus:outline-none focus:ring-2 focus:ring-lime"
+                          name="message" rows="5" required></textarea>
+              </label>
+
+              <button class="w-full rounded-md bg-forest px-5 py-3 font-semibold text-paper shadow-hard hover:bg-ink"
+                      type="submit">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <div class="text-sm text-steel">
+          © <span id="year"></span> <span class="font-bold text-ink">Ocra Technology Solutions</span>
+        </div>
+        <div class="text-sm text-steel">
+          Data cleanup • Reporting automation • Workflow integration
+        </div>
       </div>
     </footer>
 
